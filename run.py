@@ -25,8 +25,9 @@ def load_data():
 	# into numpy format
 	matrix = InputDF.as_matrix()
 
+
 	# 6 values, from 440 symbols, over 2768 days
-	matrix = np.reshape(matrix, (2768, 440, 6))
+	matrix = np.reshape(matrix, (matrix.shape[0], 440, 6))
 
 	test_size = 500;
 	window_size = 28;
@@ -44,6 +45,9 @@ def load_data():
 	# print matrix[:20].shape
 	print X_train.shape
 	print X_test.shape
+
+	# y_train = 
+	# y_test = 
 
 	return X_train, X_test
 
